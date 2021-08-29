@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+</head>
+<style>
+  select {
+    width: 150px;
+    text-overflow: ellipsis;
+  }
+
+  p {
+    margin: 3%;
+    padding: 0;
+    font-weight: bold;
+  }
+
+  .Chat {
+    background-color: #0a181d;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 4px;
+    border-color: #351624;
+    margin-bottom: 200px;
+  }
+
+  #mybutton {
+    position: fixed;
+    bottom: -5px;
+    right: 15px;
+  }
+</style>
+
+<body>
+  <form action="result.html" method="post">
+    {% csrf_token %}
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="home.html">Admission Surge</a>
+        <div class="collapse navbar-collapse" id="navbarNavDarkDropdown">
+          <ul class="navbar-nav">
+            <li class="nav-item dropdown">
+              <div>
+                <input name="rank" type="text" placeholder="Enter your rank" />
+                <select name="city" class=btn1 id="cars">
+                  <option value="City">City</option>
+                  <option value="Ahmedabad">Ahmedabad</option>
+                  <option value="Anand">Anand</option>
+                  <option value="Kalol">Kalol</option>
+                  <option value="Sabarkantha">Sabarkantha</option>
+                  <option value="Rajkot">Rajkot</option>
+                  <option value="Bharuch">Bharuch</option>
+                  <option value="Bhavnagar">Bhavnagar</option>
+                  <option value="kutch">kutch</option>
+                  <option value="dahod">dahod</option>
+                  <option value="gandhinagar">gandhinagar</option>
+                  <option value="Panchmahal">Panchmahal</option>
+                  <option value="Arvali">Arvali</option>
+                  <option value="Banaskantha">Banaskantha</option>
+                  <option value="Patan">Patan</option>
+                  <option value="Valsad">Valsad</option>
+                  <option value="Morbi">Morbi</option>
+                  <option value="Vadodara">Vadodara</option>
+                  <option value="Kheda">Kheda</option>
+                  <option value="Navsari">Navsari</option>
+                  <option value="Mahesana">Mahesana</option>
+                  <option value="Junagadh">Junagadh</option>
+                  <option value="Surat">Surat</option>
+                  <option value="Porbandar">Porbandar</option>
+                  <option value="Jamnagar">Jamnagar</option>
+                  <option value="Navsari">Navsari</option>
+                  <option value="Botad">Botad</option>
+                  <option value="Amreli">Amreli</option>
+                  <option value="Surendranagar">Surendranagar</option>
+                </select>
+                <select name="cast" class=btn1 id="cars">
+                  <option value="">Cast</option>
+                  <option value="GEN">GEN</option>
+                  <option value="Other">Other</option>
+                  <option value="Open-EBC">Open-EBC</option>
+                  <option value="SEBC">SEBC</option>
+                  <option value="SC">SC</option>
+                  <option value="ST">ST</option>
+                </select>
+                <select name="field" class=btn1 id="cars">
+                  <option value="">Feild</option>
+                  <option value="AUTOMOBILE ENGINEERING">AUTOMOBILE ENGINEERING</option>
+                  <option value="CIVIL ENGINEERING">CIVIL ENGINEERING</option>
+                  <option value="COMPUTER ENGINEERING">COMPUTER ENGINEERING</option>
+                  <option value="ELECTRICAL ENGINEERING">ELECTRICAL ENGINEERING</option>
+                  <option value="ELECTRONICS & COMMUNICATION ENGG.">ELECTRONICS & COMMUNICATION ENGG.</option>
+                  <option value="FOOD PROCESSING & TECHNOLOGY">FOOD PROCESSING & TECHNOLOGY</option>
+                  <option value="INFORMATION TECHNOLOGY">INFORMATION TECHNOLOGY</option>
+                  <option value="MECHANICAL ENGINEERING">MECHANICAL ENGINEERING</option>
+                  <option value="Civil & Infrastructure Engineering">Civil & Infrastructure Engineering</option>
+                  <option value="INFORMATION & COMMUNICATION TECHNOLOGY">INFORMATION & COMMUNICATION TECHNOLOGY</option>
+                  <option value="AERONAUTICAL ENGINEERING">AERONAUTICAL ENGINEERING</option>
+                  <option value="CHEMICAL ENGINEERING">CHEMICAL ENGINEERING</option>
+                  <option value="COMPUTER SCIENCE & ENGG">COMPUTER SCIENCE & ENGG</option>
+                  <option value="ARTIFICIAL INTELLIGENCE AND DATA SCIENCE -Emerging Area">ARTIFICIAL INTELLIGENCE AND
+                    DATA
+                    SCIENCE -Emerging Area</option>
+                  <option value="AUTOMATION AND ROBOTICS -Emerging Area">AUTOMATION AND ROBOTICS -Emerging Area</option>
+                  <option value="INFORMATION TECHNOLOGY -Emerging Area">INFORMATION TECHNOLOGY -Emerging Area</option>
+                  <option value="Nano Technology">Nano Technology</option>
+                  <option value="Robotics and Automation">Robotics and Automation</option>
+                  <option value="ELECTRONICS ENGINEERING">ELECTRONICS ENGINEERING</option>
+                  <option value="PRODUCTION ENGINEERING">PRODUCTION ENGINEERING</option>
+                  <option value="Manufacaturing Engineering">Manufacaturing Engineering</option>
+                  <option value="PLASTIC ENGINEERING">PLASTIC ENGINEERING</option>
+                  <option value="COMPUTER SCIENCE & ENGINEERING - Emerging Area">COMPUTER SCIENCE & ENGINEERING -
+                    Emerging
+                    Area</option>
+                  <option value="CYBER SECURITY - Emerging Area">CYBER SECURITY - Emerging Area</option>
+                  <option value="MECHATRONICS ENGINEERING -Emerging Area">MECHATRONICS ENGINEERING -Emerging Area
+                  </option>
+                  <option value="BIO-TECHNOLOGY">BIO-TECHNOLOGY</option>
+                  <option value="ELECTRICAL & ELECTRONICS">ELECTRICAL & ELECTRONICS</option>
+                  <option value="Hons. in ICT with Minor in Computational Sciences (CS)">Hons. in ICT with Minor in
+                    Computational Sciences (CS)</option>
+                  <option value="MATHEMATICS AND COMPUTING">MATHEMATICS AND COMPUTING</option>
+                  <option value="ENVIRONMENTAL ENGINEERING">ENVIRONMENTAL ENGINEERING</option>
+                  <option value="METALLURGICAL AND MATERIALS ENGINEERING">METALLURGICAL AND MATERIALS ENGINEERING
+                  </option>
+                  <option value="TEXTILE ENGINEERING">TEXTILE ENGINEERING</option>
+                  <option value="TEXTILE PROCESSING ENGG.">TEXTILE PROCESSING ENGG.</option>
+                  <option value="TEXTILE TECHNOLOGY">TEXTILE TECHNOLOGY</option>
+                  <option value="WATER MANAGEMENT">WATER MANAGEMENT</option>
+                  <option value="INSTRUMENTATION & CONTROL ENGG.">INSTRUMENTATION & CONTROL ENGG.</option>
+                  <option value="MECHATRONICS">MECHATRONICS</option>
+                  <option value="Computer Science & Engineering (BigData & Analysis)">Computer Science & Engineering
+                    (BigData & Analysis)</option>
+                  <option value="Computer Science & Engineering (CloudBased Applications)">Computer Science &
+                    Engineering
+                    (CloudBased Applications)</option>
+                  <option value="Computer Science & Engineering with Specialisation in Cyber Security">Computer Science
+                    &
+                    Engineering with Specialisation in Cyber Security</option>
+                  <option value="BIOMEDICAL ENGINEERING">BIOMEDICAL ENGINEERING</option>
+                  <option value="Computer Engineering (ArtificialIntelligence)">Computer Engineering
+                    (ArtificialIntelligence)</option>
+                  <option value="MARINE ENGINEERING">MARINE ENGINEERING</option>
+                  <option value="Petrochemical Engg.">Petrochemical Engg.</option>
+                  <option value="MINING ENGINEERING">MINING ENGINEERING</option>
+                  <option value="ELECTRICAL ENGINEERING -Emerging Area">ELECTRICAL ENGINEERING -Emerging Area</option>
+                  <option value="METALLURGY">METALLURGY</option>
+                  <option value="Metallurgical Engineering">Metallurgical Engineering</option>
+                  <option value="COMPUTER SCIENCE & ENGINEERING (ARTIFICIALINTELLIGENCE)">COMPUTER SCIENCE & ENGINEERING
+                    (ARTIFICIALINTELLIGENCE)</option>
+                  <option value="Computer Engineering (Cloud Tech. &Information Security)">Computer Engineering (Cloud
+                    Tech.
+                    &Information Security)</option>
+                  <option value="COMPUTER ENGINEERING (DataScience)">COMPUTER ENGINEERING (DataScience)</option>
+                  <option value="Mechatronics (Industrial Automation and Robotics)">Mechatronics (Industrial Automation
+                    and
+                    Robotics)</option>
+                  <option value="Plastic Technology">Plastic Technology</option>
+                  <option value="RUBBER TECHNOLOGY">RUBBER TECHNOLOGY</option>
+                  <option value="INDUSTRIAL ENGINEERING">INDUSTRIAL ENGINEERING</option>
+                  <option value="POWER ELECTRONICS">POWER ELECTRONICS</option>
+                  <option value="COMPUTER ENGINEERING (BIGDATA ANALYTICS)">COMPUTER ENGINEERING (BIGDATA ANALYTICS)
+                  </option>
+                  <option value="COMPUTER SCIENCE & ENGINEERING (ARTIFICIAL INTELLIGENCE AND MACHINELEARNING)">COMPUTER
+                    SCIENCE & ENGINEERING (ARTIFICIAL INTELLIGENCE AND MACHINELEARNING)</option>
+                  <option value="INFORMATION TECHNOLOGY (DATA SCIENCE)">INFORMATION TECHNOLOGY (DATA SCIENCE)</option>
+                  <option value="INFORMATION TECHNOLOGY (BLOCKCHAIN)">INFORMATION TECHNOLOGY (BLOCKCHAIN)</option>
+                  <option value="MACHINE LEARNING & ARTIFICIAL INTELLIGENCE">MACHINE LEARNING & ARTIFICIAL INTELLIGENCE
+                  </option>
+                  <option value="PETROLEUM ENGINEERING">PETROLEUM ENGINEERING</option>
+                  <option value="COMPUTER ENGINEERING (CYBER SECURITY AND FORENSICS)">COMPUTER ENGINEERING (CYBER
+                    SECURITY
+                    AND FORENSICS)</option>
+                  <option value="COMPUTER ENGINEERING(INTERNET OF THINGS)">COMPUTER ENGINEERING(INTERNET OF THINGS)
+                  </option>
+                  <option value="Agriculture Engineering">Agriculture Engineering</option>
+                  <option value="COMPUTER SCIENCE & ENGINEERING (ARTIFICIAL INTELLIGENCE)">COMPUTER SCIENCE &
+                    ENGINEERING
+                    (ARTIFICIAL INTELLIGENCE)</option>
+                  <option value="Dairy Technology">Dairy Technology</option>
+                  <option value="INFORMATION & COMMUNICATION TECHNOLOGY - Emerging Area">INFORMATION & COMMUNICATION
+                    TECHNOLOGY - Emerging Area</option>
+                  <option value="Chemical and Bio-chemical Engineering">Chemical and Bio-chemical Engineering</option>
+                  <option value="Fire and Safety, Health, Environment">Fire and Safety, Health, Environment</option>
+                  <option value="Chemical Technology">Chemical Technology</option>
+                  <option value="Environmental Science & Technology">Environmental Science & Technology</option>
+                  <option value="COMPUTER ENGINEERING (ARTIFICIAL INTELLIGENCE AND MACHINE LEARNING)">COMPUTER
+                    ENGINEERING
+                    (ARTIFICIAL INTELLIGENCE AND MACHINE LEARNING)</option>
+                  <option value="COMPUTER ENGINEERING">COMPUTER ENGINEERING</option>
+                  <option value="COMPUTER ENGINEERING (CLOUD COMPUTING)">COMPUTER ENGINEERING (CLOUD COMPUTING)</option>
+                  <option value="Computer Science & Engineering with Specialisation in Cyber Security">Computer Science
+                    &
+                    Engineering with Specialisation in Cyber Security</option>
+                  <option value="ELECTRONICS & COMMUNICATION ENGG.">ELECTRONICS & COMMUNICATION ENGG.</option>
+                  <option value="ARTIFICIAL INTELLIGENCE">ARTIFICIAL INTELLIGENCE</option>
+                  <option value="CLOUD TECH &INFORMATIONSECURITY">CLOUD TECH &INFORMATIONSECURITY</option>
+                  <option value="ENVIRONMENT ENGINEERING">ENVIRONMENT ENGINEERING</option>
+                  <option value="MOBILE APPLICATION & CLOUDTECHOLOGY">MOBILE APPLICATION & CLOUDTECHOLOGY</option>
+                </select>
+                <button type="submit">submit</button>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <footer class="footer text-center text-lg-start bg-light text-muted fixed-bottom"
+      style="background-color: rgba(0, 0, 0, 0.05);padding: 20px!important;">
+      <div class="row">
+        <div class="col-md-4">
+          <br><br>
+
+          Contact:9664996037<br>
+          Email id:Harshilmodh77@gmail.com<br>
+          Linkedin:<a href="https://www.linkedin.com/in/harshil-modh-53a62a1a6/" class="li">Harshil Modh</a><br>
+          Instagram:<a href="https://www.instagram.com/harshil_modh/" class="li">Harshil Modh</a>
+        </div>
+        <div class="col-md-4">
+          Reach Us<br><br>
+          Contact:9664996037<br>
+          Email id:Harshilmodh77@gmail.com<br>
+          Linkedin:<a href="https://www.linkedin.com/in/harshil-modh-53a62a1a6/" class="li">Harshil Modh</a><br>
+          Instagram:<a href="https://www.instagram.com/harshil_modh/" class="li">Harshil Modh</a>
+
+        </div>
+        <div class="col-md-4">
+          <br><br>
+          Contact:9664996037<br>
+          Email id:Harshilmodh77@gmail.com<br>
+          Linkedin:<a href="https://www.linkedin.com/in/harshil-modh-53a62a1a6/" class="li">Harshil Modh</a><br>
+          Instagram:<a href="https://www.instagram.com/harshil_modh/" class="li">Harshil Modh</a>
+        </div>
+      </div>
+
+    </footer>
+  </form>
+  <div id="mybutton">
+    <form action="output.html" method="post">
+      {% csrf_token %}
+      <button class="Chat">Chat</button>
+    </form>
+  </div>
+  </div>
+
+</body>
+
+</html>
